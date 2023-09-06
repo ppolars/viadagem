@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="/pedido.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="center">
+        <h1>quer ficar comigo?♡</h1>
+    </div>
+
+    <div class="img"></div>
+    <div class="bnt">
+        <button id="sim"><a href="https://youtu.be/guDJvZp5Bqk?feature=shared">Sim</a></button>
+        <button id="não">Não</button>
+    </div>
+
+    <script>
+        const naoBtn = document.querySelector('#não'); // Corrigir o seletor
+        const simBtn = document.querySelector('#sim');
+        const img = document.querySelector('.img'); // Corrigir a classe
+
+        simBtn.addEventListener('mouseover', () => {
+            img.style.backgroundImage = "url('https://i.pinimg.com/originals/16/c8/a6/16c8a62c6efe1cd86940455b35a75b67.jpg')";
+        });
+
+        simBtn.addEventListener('mouseout', () => {
+            img.style.backgroundImage = "url('https://i.pinimg.com/originals/16/c8/a6/16c8a62c6efe1cd86940455b35a75b67.jpg')";
+        });
+
+        naoBtn.addEventListener('mouseover', () => {
+            naoBtn.style.position = 'absolute';
+            naoBtn.style.left = Math.floor(Math.random() * (window.innerWidth - naoBtn.clientWidth)) + "px"; // Evitar que o botão saia da tela
+            naoBtn.style.top = Math.floor(Math.random() * (window.innerHeight - naoBtn.clientHeight)) + "px"; // Evitar que o botão saia da tela
+        });
+
+    </script>
+</body>
+</html>
